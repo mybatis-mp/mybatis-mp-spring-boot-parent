@@ -26,6 +26,7 @@ import java.io.UncheckedIOException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
+import java.text.Normalizer;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -40,29 +41,16 @@ public class SpringBootVFS extends VFS {
 
     private static Charset urlDecodingCharset;
     private static Supplier<ClassLoader> classLoaderSupplier;
-    private final ResourcePatternResolver resourceResolver;
 
     static {
         setUrlDecodingCharset(Charset.defaultCharset());
         setClassLoaderSupplier(ClassUtils::getDefaultClassLoader);
     }
 
+    private final ResourcePatternResolver resourceResolver;
+
     public SpringBootVFS() {
         this.resourceResolver = new PathMatchingResourcePatternResolver(classLoaderSupplier.get());
-    }
-
-    @Override
-    public boolean isValid() {
-        return true;
-    }
-
-    @Override
-    protected List<String> list(URL url, String path) throws IOException {
-        String urlString = URLDecoder.decode(url.toString(), urlDecodingCharset.name());
-        String baseUrlString = urlString.endsWith("/") ? urlString : urlString.concat("/");
-        Resource[] resources = resourceResolver.getResources(baseUrlString + "**/*.class");
-        return Stream.of(resources).map(resource -> preserveSubpackageName(baseUrlString, resource, path))
-                .collect(Collectors.toList());
     }
 
     /**
@@ -85,7 +73,7 @@ public class SpringBootVFS extends VFS {
      * </p>
      *
      * @param supplier the supplier for providing {@link ClassLoader} to used
-     * @since 2.3.1
+     * @since 3.0.2
      */
     public static void setClassLoaderSupplier(Supplier<ClassLoader> supplier) {
         classLoaderSupplier = supplier;
@@ -95,10 +83,26 @@ public class SpringBootVFS extends VFS {
                                                  final String rootPath) {
         try {
             return rootPath + (rootPath.endsWith("/") ? "" : "/")
-                    + resource.getURL().toString().substring(baseUrlString.length());
+                    + Normalizer
+                    .normalize(URLDecoder.decode(resource.getURL().toString(), urlDecodingCharset), Normalizer.Form.NFC)
+                    .substring(baseUrlString.length());
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
+    }
+
+    @Override
+    public boolean isValid() {
+        return true;
+    }
+
+    @Override
+    protected List<String> list(URL url, String path) throws IOException {
+        String urlString = URLDecoder.decode(url.toString(), urlDecodingCharset);
+        String baseUrlString = urlString.endsWith("/") ? urlString : urlString.concat("/");
+        Resource[] resources = resourceResolver.getResources(baseUrlString + "**/*.class");
+        return Stream.of(resources).map(resource -> preserveSubpackageName(baseUrlString, resource, path))
+                .collect(Collectors.toList());
     }
 
 }

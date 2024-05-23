@@ -74,7 +74,7 @@ import java.util.stream.Stream;
  * @author Kazuki Shimizu
  * @author Eduardo Macarrón
  */
-@org.springframework.context.annotation.Configuration
+@org.springframework.context.annotation.Configuration(proxyBeanMethods = false)
 @ConditionalOnClass({SqlSessionFactory.class, SqlSessionFactoryBean.class})
 @ConditionalOnSingleCandidate(DataSource.class)
 @EnableConfigurationProperties(MybatisProperties.class)
@@ -132,7 +132,9 @@ public class MybatisAutoConfiguration implements InitializingBean {
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         SqlSessionFactoryBean factory = new SqlSessionFactoryBean();
         factory.setDataSource(dataSource);
-        factory.setVfs(SpringBootVFS.class);
+        if (properties.getConfiguration() == null || properties.getConfiguration().getVfsImpl() == null) {
+            factory.setVfs(SpringBootVFS.class);
+        }
         if (StringUtils.hasText(this.properties.getConfigLocation())) {
             factory.setConfigLocation(this.resourceLoader.getResource(this.properties.getConfigLocation()));
         }
@@ -182,10 +184,13 @@ public class MybatisAutoConfiguration implements InitializingBean {
     }
 
     private void applyConfiguration(SqlSessionFactoryBean factory) {
-        //替换mybatis配置类
-        MybatisConfiguration configuration = this.properties.getConfiguration();
-        if (configuration == null && !StringUtils.hasText(this.properties.getConfigLocation())) {
+        MybatisProperties.CoreConfiguration coreConfiguration = this.properties.getConfiguration();
+        MybatisConfiguration configuration = null;
+        if (coreConfiguration != null || !StringUtils.hasText(this.properties.getConfigLocation())) {
             configuration = new MybatisConfiguration();
+        }
+        if (configuration != null && coreConfiguration != null) {
+            coreConfiguration.applyTo(configuration);
         }
         if (configuration != null && !CollectionUtils.isEmpty(this.configurationCustomizers)) {
             for (ConfigurationCustomizer customizer : this.configurationCustomizers) {
@@ -201,7 +206,6 @@ public class MybatisAutoConfiguration implements InitializingBean {
                 customizer.customize(factory);
             }
         }
-
         try {
             //增加启动打印
             Field configurationField = SqlSessionFactoryBean.class.getDeclaredField("configuration");
@@ -310,7 +314,7 @@ public class MybatisAutoConfiguration implements InitializingBean {
      * If mapper registering configuration or mapper scanning configuration not present, this configuration allow to scan
      * mappers based on the same component-scanning path as Spring Boot itself.
      */
-    @org.springframework.context.annotation.Configuration
+    @org.springframework.context.annotation.Configuration(proxyBeanMethods = false)
     @Import(AutoConfiguredMapperScannerRegistrar.class)
     @ConditionalOnMissingBean({MapperFactoryBean.class, MapperScannerConfigurer.class})
     public static class MapperScannerRegistrarNotFoundConfiguration implements InitializingBean {

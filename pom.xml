@@ -10,7 +10,7 @@
     </parent>
     <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
     <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-    <version>1.4.7</version>
+    <version>1.4.7-spring-boot3</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -28,16 +28,17 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <mybatis-mp.version>1.4.7</mybatis-mp.version>
-        <mybatis-mp-spring-boot-starter.version>1.4.7</mybatis-mp-spring-boot-starter.version>
+        <mybatis-mp-spring-boot-starter.version>1.4.7-spring-boot3</mybatis-mp-spring-boot-starter.version>
 
-
-        <mybatis-spring.version>2.1.2</mybatis-spring.version>
-        <spring-boot.version>2.7.18</spring-boot.version>
+        <logback.version>1.5.3</logback.version>
+        <slf4j.version>2.0.11</slf4j.version>
+        <mybatis-spring.version>3.0.3</mybatis-spring.version>
+        <spring-boot.version>3.2.4</spring-boot.version>
 
         <mybatis-freemarker.version>1.2.4</mybatis-freemarker.version>
         <mybatis-velocity.version>2.1.2</mybatis-velocity.version>
@@ -70,6 +71,31 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
                 <version>${mybatis-spring.version}</version>
+            </dependency>
+
+            <!-- log -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
             </dependency>
 
             <dependency>
@@ -179,11 +205,24 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
+                    <parameters>true</parameters>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <additionalOptions combine.children="append">
+                        <option>--add-modules</option>
+                        <option>java.desktop</option>
+                        <option>--add-modules</option>
+                        <option>java.sql</option>
+                    </additionalOptions>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
