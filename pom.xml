@@ -38,7 +38,7 @@
         <logback.version>1.5.3</logback.version>
         <slf4j.version>2.0.11</slf4j.version>
         <mybatis-spring.version>3.0.3</mybatis-spring.version>
-        <spring-boot.version>3.2.4</spring-boot.version>
+        <spring-boot.version>3.2.5</spring-boot.version>
 
         <mybatis-freemarker.version>1.2.4</mybatis-freemarker.version>
         <mybatis-velocity.version>2.1.2</mybatis-velocity.version>
