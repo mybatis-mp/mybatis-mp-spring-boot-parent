@@ -6,11 +6,11 @@
     <parent>
         <groupId>cn.mybatis-mp</groupId>
         <artifactId>mybatis-mp</artifactId>
-        <version>1.5.0</version>
+        <version>1.5.1</version>
     </parent>
     <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
     <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-    <version>1.5.0-spring-boot3</version>
+    <version>1.5.1-spring-boot3</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -32,13 +32,13 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <mybatis-mp.version>1.5.0</mybatis-mp.version>
-        <mybatis-mp-spring-boot-starter.version>1.5.0-spring-boot3</mybatis-mp-spring-boot-starter.version>
+        <mybatis-mp.version>1.5.1</mybatis-mp.version>
+        <mybatis-mp-spring-boot-starter.version>1.5.1-spring-boot3</mybatis-mp-spring-boot-starter.version>
 
         <logback.version>1.5.3</logback.version>
         <slf4j.version>2.0.11</slf4j.version>
         <mybatis-spring.version>3.0.3</mybatis-spring.version>
-        <spring-boot.version>3.2.5</spring-boot.version>
+        <spring-boot.version>3.3.0</spring-boot.version>
 
         <mybatis-freemarker.version>1.2.4</mybatis-freemarker.version>
         <mybatis-velocity.version>2.1.2</mybatis-velocity.version>
