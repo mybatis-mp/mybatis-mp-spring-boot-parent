@@ -15,6 +15,16 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <issueManagement>
+        <system>Gitee Issue</system>
+        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent.git</connection>
+        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
