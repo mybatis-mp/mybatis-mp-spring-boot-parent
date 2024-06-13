@@ -6,7 +6,7 @@
     <parent>
         <groupId>cn.mybatis-mp</groupId>
         <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-        <version>1.5.7-rc8</version>
+        <version>1.5.8-rc</version>
     </parent>
 
     <artifactId>mybatis-mp-spring-boot-starter</artifactId>
