@@ -30,7 +30,6 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <mybatis-mp.version>1.7.1</mybatis-mp.version>
         <mybatis-mp-spring-boot-starter.version>1.7.1-spring-boot3</mybatis-mp-spring-boot-starter.version>
