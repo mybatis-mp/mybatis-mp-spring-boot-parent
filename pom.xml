@@ -61,12 +61,6 @@
             </dependency>
 
             <dependency>
-                <groupId>cn.mybatis-mp</groupId>
-                <artifactId>mybatis-mp-generator</artifactId>
-                <version>${mybatis-mp.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
                 <version>${mybatis-spring.version}</version>
