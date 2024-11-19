@@ -116,6 +116,9 @@ public class MybatisAutoConfiguration implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() {
+        if(StringUtils.hasText(this.properties.getConfigLocation())){
+            throw new RuntimeException("mybatis-mp not support config location,please use yml or use ConfigurationCustomizer");
+        }
         checkConfigFileExists();
     }
 
