@@ -20,11 +20,11 @@
     <parent>
         <groupId>cn.mybatis-mp</groupId>
         <artifactId>mybatis-mp</artifactId>
-        <version>1.7.7-RC</version>
+        <version>1.7.7-RC3</version>
     </parent>
     <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
     <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-    <version>1.7.7-RC</version>
+    <version>1.7.7-RC3</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -42,8 +42,8 @@
     </scm>
 
     <properties>
-        <mybatis-mp.version>1.7.7-RC</mybatis-mp.version>
-        <mybatis-mp-spring-boot-starter.version>1.7.7-RC</mybatis-mp-spring-boot-starter.version>
+        <mybatis-mp.version>1.7.7-RC3</mybatis-mp.version>
+        <mybatis-mp-spring-boot-starter.version>1.7.7-RC3</mybatis-mp-spring-boot-starter.version>
 
         <mybatis-spring.version>2.1.2</mybatis-spring.version>
         <spring-boot.version>2.7.18</spring-boot.version>
