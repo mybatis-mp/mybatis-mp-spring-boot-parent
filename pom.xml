@@ -48,7 +48,7 @@
         <mybatis-mp.version>1.7.9-RC5</mybatis-mp.version>
         <mybatis-mp-spring-boot-starter.version>1.7.9-RC5-spring-boot3</mybatis-mp-spring-boot-starter.version>
 
-        <logback.version>1.5.13</logback.version>
+        <logback.version>1.5.15</logback.version>
         <slf4j.version>2.0.16</slf4j.version>
         <mybatis-spring.version>3.0.4</mybatis-spring.version>
         <spring-boot.version>3.4.1</spring-boot.version>
