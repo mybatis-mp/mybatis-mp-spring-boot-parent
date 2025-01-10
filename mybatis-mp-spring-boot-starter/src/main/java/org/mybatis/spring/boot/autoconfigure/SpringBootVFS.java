@@ -24,6 +24,7 @@ import java.io.UncheckedIOException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
+import java.text.Normalizer;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -69,7 +70,9 @@ public class SpringBootVFS extends VFS {
      * Default is system default charset.
      * </p>
      *
-     * @param charset the charset for decoding an encoded URL string
+     * @param charset
+     *          the charset for decoding an encoded URL string
+     *
      * @since 2.3.0
      */
     public static void setUrlDecodingCharset(Charset charset) {
@@ -82,8 +85,10 @@ public class SpringBootVFS extends VFS {
      * Default is a returned instance from {@link ClassUtils#getDefaultClassLoader()}.
      * </p>
      *
-     * @param supplier the supplier for providing {@link ClassLoader} to used
-     * @since 2.3.1
+     * @param supplier
+     *          the supplier for providing {@link ClassLoader} to used
+     *
+     * @since 3.0.2
      */
     public static void setClassLoaderSupplier(Supplier<ClassLoader> supplier) {
         classLoaderSupplier = supplier;
@@ -93,7 +98,9 @@ public class SpringBootVFS extends VFS {
                                                  final String rootPath) {
         try {
             return rootPath + (rootPath.endsWith("/") ? "" : "/")
-                    + resource.getURL().toString().substring(baseUrlString.length());
+                    + Normalizer
+                    .normalize(URLDecoder.decode(resource.getURL().toString(), urlDecodingCharset.name()), Normalizer.Form.NFC)
+                    .substring(baseUrlString.length());
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }

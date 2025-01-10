@@ -52,6 +52,8 @@
         <mybatis-velocity.version>2.3.0</mybatis-velocity.version>
         <mybatis-thymeleaf.version>1.1.0</mybatis-thymeleaf.version>
 
+        <logging.log4j.version>2.24.3</logging.log4j.version>
+
         <argLine>--add-opens java.base/java.lang=ALL-UNNAMED -Dfile.encoding=UTF-8</argLine>
     </properties>
 
@@ -103,6 +105,12 @@
                 <groupId>org.mybatis.scripting</groupId>
                 <artifactId>mybatis-thymeleaf</artifactId>
                 <version>${mybatis-thymeleaf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-to-slf4j</artifactId>
+                <version>${logging.log4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
