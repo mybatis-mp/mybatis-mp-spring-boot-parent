@@ -15,7 +15,7 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
         <dependency>
             <groupId>cn.mybatis-mp</groupId>
             <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-            <version>1.8.0-RC3</version>
+            <version>1.8.0</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -38,7 +38,7 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
         <dependency>
             <groupId>cn.mybatis-mp</groupId>
             <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-            <version>1.8.0-RC3-spring-boot3</version>
+            <version>1.8.0-spring-boot3</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
