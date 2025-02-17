@@ -13,7 +13,7 @@
  */
 package org.mybatis.spring.boot.autoconfigure;
 
-import cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration;
+import cn.xbatis.core.mybatis.configuration.MybatisConfiguration;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
 import org.apache.ibatis.plugin.Interceptor;
@@ -115,7 +115,7 @@ public class MybatisAutoConfiguration implements InitializingBean {
     @Override
     public void afterPropertiesSet() {
         if(StringUtils.hasText(this.properties.getConfigLocation())){
-            throw new RuntimeException("mybatis-mp not support config location,please use yml or use ConfigurationCustomizer");
+            throw new RuntimeException("xbatis not support config location,please use yml or use ConfigurationCustomizer");
         }
         checkConfigFileExists();
     }

@@ -18,32 +18,53 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>cn.mybatis-mp</groupId>
-        <artifactId>mybatis-mp</artifactId>
-        <version>1.8.1-RC3</version>
+        <groupId>cn.xbatis</groupId>
+        <artifactId>xbatis</artifactId>
+        <version>1.8.1</version>
     </parent>
-    <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
-    <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-    <version>1.8.1-RC3</version>
+
+    <url>https://gitee.com/xbatis/xbatis-spring-boot-parent</url>
+    <artifactId>xbatis-spring-boot-parent</artifactId>
+    <description>
+        xbatis的spring启动器的parent
+    </description>
     <packaging>pom</packaging>
 
     <modules>
-        <module>mybatis-mp-spring-boot-starter</module>
+        <module>xbatis-spring-boot-starter</module>
     </modules>
 
     <issueManagement>
         <system>Gitee Issue</system>
-        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent/issues</url>
+        <url>https://gitee.com/xbatis/xbatis-spring-boot-starter/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent.git</connection>
-        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
+        <connection>https://gitee.com/xbatis/xbatis-spring-boot-starter.git</connection>
+        <url>https://gitee.com/xbatis/xbatis-spring-boot-starter</url>
     </scm>
 
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://gitee.com/xbatis/xbatis-spring-boot-starter/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ai东</name>
+            <email>abc-127@live.cn</email>
+            <roles>
+                <role>Owner</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
     <properties>
-        <mybatis-mp.version>1.8.1-RC3</mybatis-mp.version>
-        <mybatis-mp-spring-boot-starter.version>1.8.1-RC3</mybatis-mp-spring-boot-starter.version>
+        <xbatis.version>1.8.1</xbatis.version>
+        <xbatis-spring-boot-starter.version>1.8.1</xbatis-spring-boot-starter.version>
 
         <mybatis-spring.version>2.1.2</mybatis-spring.version>
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -60,15 +81,15 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>cn.mybatis-mp</groupId>
-                <artifactId>mybatis-mp-spring-boot-starter</artifactId>
-                <version>${mybatis-mp-spring-boot-starter.version}</version>
+                <groupId>cn.xbatis</groupId>
+                <artifactId>xbatis-spring-boot-starter</artifactId>
+                <version>${xbatis-spring-boot-starter.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>cn.mybatis-mp</groupId>
-                <artifactId>mybatis-mp-core</artifactId>
-                <version>${mybatis-mp.version}</version>
+                <groupId>cn.xbatis</groupId>
+                <artifactId>xbatis-core</artifactId>
+                <version>${xbatis.version}</version>
             </dependency>
 
             <dependency>
@@ -117,28 +138,33 @@
 
     <dependencies>
         <dependency>
-            <groupId>cn.mybatis-mp</groupId>
-            <artifactId>mybatis-mp-core</artifactId>
+            <groupId>cn.xbatis</groupId>
+            <artifactId>xbatis-core</artifactId>
+            <version>${xbatis.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
+            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -146,24 +172,28 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-freemarker</artifactId>
+            <version>${mybatis-freemarker.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-velocity</artifactId>
+            <version>${mybatis-velocity.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-thymeleaf</artifactId>
+            <version>${mybatis-thymeleaf.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>

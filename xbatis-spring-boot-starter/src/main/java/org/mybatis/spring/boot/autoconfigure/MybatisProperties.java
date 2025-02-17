@@ -13,7 +13,7 @@
  */
 package org.mybatis.spring.boot.autoconfigure;
 
-import cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration;
+import cn.xbatis.core.mybatis.configuration.MybatisConfiguration;
 import org.apache.ibatis.scripting.LanguageDriver;
 import org.apache.ibatis.session.ExecutorType;
 import org.springframework.boot.context.properties.ConfigurationProperties;

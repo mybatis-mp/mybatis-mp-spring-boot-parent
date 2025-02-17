@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "sourceType": "cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration",
+      "sourceType": "cn.xbatis.core.mybatis.configuration.MybatisConfiguration",
       "defaultValue": "org.apache.ibatis.scripting.xmltags.XMLLanguageDriver",
       "name": "mybatis.configuration.default-scripting-language",
       "description": "A default LanguageDriver class.",
@@ -12,14 +12,14 @@
       }
     },
     {
-      "sourceType": "cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration",
+      "sourceType": "cn.xbatis.core.mybatis.configuration.MybatisConfiguration",
       "defaultValue": "org.apache.ibatis.type.EnumTypeHandler",
       "name": "mybatis.configuration.default-enum-type-handler",
       "description": "A default TypeHandler class for Enum.",
       "type": "java.lang.Class<? extends org.apache.ibatis.type.TypeHandler>"
     },
     {
-      "sourceType": "cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration",
+      "sourceType": "cn.xbatis.core.mybatis.configuration.MybatisConfiguration",
       "defaultValue": "MYSQL",
       "name": "mybatis.configuration.database-id",
       "description": "A default db type for databaseId.",
