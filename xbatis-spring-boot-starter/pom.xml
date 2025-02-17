@@ -51,6 +51,17 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Ai东</name>
+            <email>abc-127@live.cn</email>
+            <roles>
+                <role>Owner</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
     <build>
         <plugins>
             <plugin>
