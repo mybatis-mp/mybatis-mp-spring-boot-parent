@@ -1,7 +1,7 @@
-# mybatis-mp-spring-boot-parent
+# xbatis-spring-boot-parent
 
 ## 介绍
-mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改动很小，只是替换成mybatis-mp的配置类
+xbatis springboot启动器，基于mybatis-spring-boot-starter改动，改动很小，只是替换成xbatis的配置类
 
 # 快速开始
 
@@ -13,9 +13,9 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>cn.mybatis-mp</groupId>
-            <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-            <version>1.5.9</version>
+            <groupId>cn.xbatis</groupId>
+            <artifactId>xbatis-spring-boot-parent</artifactId>
+            <version>1.8.1</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -24,8 +24,8 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
 
 <dependencies>
     <dependency>
-        <groupId>cn.mybatis-mp</groupId>
-        <artifactId>mybatis-mp-spring-boot-starter</artifactId>
+        <groupId>cn.xbatis</groupId>
+        <artifactId>xbatis-spring-boot-starter</artifactId>
     </dependency>
 </dependencies>
 ```
@@ -36,9 +36,9 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>cn.mybatis-mp</groupId>
-            <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-            <version>1.5.9-spring-boot3</version>
+            <groupId>cn.xbatis</groupId>
+            <artifactId>xbatis-spring-boot-parent</artifactId>
+            <version>1.8.1-spring-boot3</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -47,8 +47,8 @@ mybatis-mp springboot启动器，基于mybatis-spring-boot-starter改动，改�
 
 <dependencies>
     <dependency>
-        <groupId>cn.mybatis-mp</groupId>
-        <artifactId>mybatis-mp-spring-boot-starter</artifactId>
+        <groupId>cn.xbatis</groupId>
+        <artifactId>xbatis-spring-boot-starter</artifactId>
     </dependency>
 </dependencies>
 ```
@@ -117,15 +117,15 @@ mybatis:
 
 > 2.包含 mybatis、mybatis-spring、 mybatis-spring-boot-starter 所有功能（支持原有mybatis的所有功能）
 
-> 3.更多mybatis 配置参数，参考 https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/zh/index.html
+> 3.更多mybatis 配置参数，参考 https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/zh_CN/index.html
 
-> 4.参考示例：https://gitee.com/mybatis-mp/mybatis-mp/tree/master/mybatis-mp-spring-boot-demo
+> 4.参考示例：https://gitee.com/xbatis/xbatis/tree/master/xbatis-spring-boot-demo
 
 > 5.更多 mybatis 用法，参考：
-> mybatis：https://mybatis.org/mybatis-3/zh/index.html
+> mybatis：https://mybatis.org/mybatis-3/zh_CN/index.html
 >
-> mybatis spring: https://mybatis.org/spring/zh/index.html
+> mybatis spring: https://mybatis.org/spring/zh_CN/index.html
 
-> 6.更多mybatis-mp 用法，参考作者编写的test case:(包含各种简单，复杂的CRUD操作案例)
+> 6.更多xbatis 用法，参考作者编写的test case:(包含各种简单，复杂的CRUD操作案例)
 >
-> https://gitee.com/mybatis-mp/mybatis-mp/tree/master/mybatis-mp-core/src/test/java/com/mybatis/mp/core/test/testCase
+> https://gitee.com/xbatis/xbatis/tree/master/xbatis-core/src/test/java/com/mybatis/mp/core/test/testCase

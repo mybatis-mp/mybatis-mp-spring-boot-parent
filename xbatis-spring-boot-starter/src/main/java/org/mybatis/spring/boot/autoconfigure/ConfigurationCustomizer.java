@@ -13,7 +13,7 @@
  */
 package org.mybatis.spring.boot.autoconfigure;
 
-import cn.mybatis.mp.core.mybatis.configuration.MybatisConfiguration;
+import cn.xbatis.core.mybatis.configuration.MybatisConfiguration;
 
 /**
  * Callback interface that can be customized a {@link MybatisConfiguration} object generated on auto-configuration.

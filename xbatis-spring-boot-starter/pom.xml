@@ -18,12 +18,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>cn.mybatis-mp</groupId>
-        <artifactId>mybatis-mp-spring-boot-parent</artifactId>
-        <version>1.8.1-RC3-spring-boot3</version>
+        <groupId>cn.xbatis</groupId>
+        <artifactId>xbatis-spring-boot-parent</artifactId>
+        <version>1.8.1-spring-boot3</version>
     </parent>
 
-    <artifactId>mybatis-mp-spring-boot-starter</artifactId>
+    <url>https://gitee.com/xbatis/xbatis-spring-boot-parent/tree/springboot3/xbatis-spring-boot-starter</url>
+    <artifactId>xbatis-spring-boot-starter</artifactId>
+    <description>
+        xbatis的spring3启动器的
+    </description>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -31,13 +36,20 @@
 
     <issueManagement>
         <system>Gitee Issue</system>
-        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent/issues</url>
+        <url>https://gitee.com/xbatis/xbatis-spring-boot-parent/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent.git</connection>
-        <url>https://gitee.com/mybatis-mp/mybatis-mp-spring-boot-parent</url>
+        <connection>https://gitee.com/xbatis/xbatis-spring-boot-parent.git</connection>
+        <url>https://gitee.com/xbatis/xbatis-spring-boot-parent</url>
     </scm>
+
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://gitee.com/xbatis/xbatis-spring-boot-starter/blob/master/LICENSE</url>
+        </license>
+    </licenses>
 
     <build>
         <plugins>
