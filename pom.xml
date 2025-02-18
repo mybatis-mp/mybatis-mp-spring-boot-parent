@@ -163,31 +163,26 @@
         <dependency>
             <groupId>cn.xbatis</groupId>
             <artifactId>xbatis-core</artifactId>
-            <version>${xbatis.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
-            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -195,28 +190,24 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-freemarker</artifactId>
-            <version>${mybatis-freemarker.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-velocity</artifactId>
-            <version>${mybatis-velocity.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-thymeleaf</artifactId>
-            <version>${mybatis-thymeleaf.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
