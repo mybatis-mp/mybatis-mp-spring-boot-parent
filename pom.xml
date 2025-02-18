@@ -63,9 +63,6 @@
     </developers>
 
     <properties>
-        <xbatis.version>1.8.1</xbatis.version>
-        <xbatis-spring-boot-starter.version>1.8.1</xbatis-spring-boot-starter.version>
-
         <mybatis-spring.version>2.1.2</mybatis-spring.version>
         <spring-boot.version>2.7.18</spring-boot.version>
 
@@ -83,7 +80,7 @@
             <dependency>
                 <groupId>cn.xbatis</groupId>
                 <artifactId>xbatis-spring-boot-starter</artifactId>
-                <version>${xbatis-spring-boot-starter.version}</version>
+                <version>${parent.version}</version>
             </dependency>
 
             <dependency>
@@ -140,31 +137,26 @@
         <dependency>
             <groupId>cn.xbatis</groupId>
             <artifactId>xbatis-core</artifactId>
-            <version>${xbatis.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
-            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -172,28 +164,24 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-freemarker</artifactId>
-            <version>${mybatis-freemarker.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-velocity</artifactId>
-            <version>${mybatis-velocity.version}</version>
             <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis.scripting</groupId>
             <artifactId>mybatis-thymeleaf</artifactId>
-            <version>${mybatis-thymeleaf.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>

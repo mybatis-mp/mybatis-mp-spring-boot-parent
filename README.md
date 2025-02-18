@@ -1,7 +1,7 @@
 # xbatis-spring-boot-parent
 
 ## 介绍
-xbatis springboot启动器，基于mybatis-spring-boot-starter改动，改动很小，只是替换成mybatis的配置类
+xbatis springboot启动器，基于mybatis-spring-boot-starter改动，改动很小，只是替换成xbatis的配置类
 
 # 快速开始
 
